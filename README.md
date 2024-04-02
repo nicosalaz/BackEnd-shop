@@ -5,7 +5,6 @@
 * Maven v3.9.6
 ## Descripción
 Componente back-end para la lógica de toda la tienda virtual, también la consulta y presentación de datos para consumo del front-end
-## Diseño de base de datos
 
 # Base de datos
 ## Componentes
