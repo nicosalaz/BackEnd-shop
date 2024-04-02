@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "993e5a0a-7185-4a1c-b5e4-9491f4fbbdbf",
+		"name": "Equitel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25293708"
+	},
+	"item": [
+		{
+			"name": "AllProvider",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/provider",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"provider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/employee",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/product",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllShoppingCar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/shoppingCar?fkEmployee=1",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"shoppingCar"
+					],
+					"query": [
+						{
+							"key": "fkEmployee",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllDetailSale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/detailSaleV?idSale=2",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"detailSaleV"
+					],
+					"query": [
+						{
+							"key": "idSale",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/sale/report",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"sale",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllSale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/sale",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"sale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllRole",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/role",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employeeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/role",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"nicosalaz\",\r\n    \"password\":\"n1c0l4s1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/employee/auth",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"employee",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"lastName\": \"Salazar\",\r\n    \"user\": \"nicosalaz\",\r\n    \"password\":\"n1c0l4s10\",\r\n    \"fkRole\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/employee",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Investment Managers\",\r\n    \"description\": \"maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus\",\r\n    \"price\": 43000,\r\n    \"model\":\"Clothing\",\r\n    \"fkProvider\":1,\r\n    \"existence\": 901\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/product",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fkProduct\": 3,\r\n    \"fkEmployee\":4,\r\n    \"amount\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/shoppingCar",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"shoppingCar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSale",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fkEmployee\":1,\r\n    \"total\": 297000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/sale",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"sale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCar",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCart\": 25,\r\n    \"amount\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/shoppingCar",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"shoppingCar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEmpleado\":10,\r\n    \"name\": \"Nicolas\",\r\n    \"lastName\": \"Salazar Victoria\",\r\n    \"user\": \"nicosalaz\",\r\n    \"password\":\"n1c0l4s10\",\r\n    \"fkRole\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/employee",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProd",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":11,\r\n    \"name\": \"Investment Managers\",\r\n    \"description\": \"maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus\",\r\n    \"price\": 43000,\r\n    \"model\": \"Clothing\",\r\n    \"fkProvider\": 1,\r\n    \"existence\": 901\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/product",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"lastName\": \"Salazar\",\r\n    \"user\": \"nicosalaz\",\r\n    \"password\":\"n1c0l4s10\",\r\n    \"fkRole\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/employee?id=80",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "80"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProd",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"lastName\": \"Salazar\",\r\n    \"user\": \"nicosalaz\",\r\n    \"password\":\"n1c0l4s10\",\r\n    \"fkRole\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/product?id=11",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteItemCart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"lastName\": \"Salazar\",\r\n    \"user\": \"nicosalaz\",\r\n    \"password\":\"n1c0l4s10\",\r\n    \"fkRole\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}8080/equitel-api/shoppingCar?id=12",
+					"host": [
+						"{{localhost}}8080"
+					],
+					"path": [
+						"equitel-api",
+						"shoppingCar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
