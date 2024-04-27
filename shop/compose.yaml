@@ -1,0 +1,24 @@
+services:
+  server:
+    build: 
+      context: ./
+    container_name: java_app_shop
+    image: shop-java-app:1.0.0
+    ports:
+      - 8080:8080
+    environment:
+    - DATABASE_URL=jdbc:mysql://db-shop:3306/equitel
+    - DATABASE_USER=root
+    - DATABASE_PASSWORD=root
+    depends_on:
+    - db-shop
+  db-shop:
+   container_name: db-mysql-shop
+   image: mysql:8.0
+   ports:
+   - 3306:3306
+   environment:
+   - MYSQL_ROOT_PASSWORD=root
+   - MYSQL_DATABASE=shop
+   - MYSQL_USER=root
+   - MYSQL_PASSWORD=root
